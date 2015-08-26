@@ -1,0 +1,117 @@
+\usepackage{ifxetex}
+\usepackage{ifpdf}
+
+\usepackage{graphicx}       % standard LaTeX graphics tool when including figure files
+	\graphicspath{{./figures/}}
+	\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg,.eps}
+	
+\usepackage{array}			% improves the standard LaTeX2e array and tabular environments to provide better appearance and additional user controls.
+
+%\usepackage[font=footnotesize]{subfig}	% replacement for subfigure.sty package 
+\usepackage[caption=false,font=footnotesize]{subfig}
+% subfig.sty requires and automatically loads caption.sty which will override
+% template specific handling of captions and this will result in non-template style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% your template.cls handing of captions.
+
+\usepackage{sidecap}	% for side captions (use \begin{SCfigure})
+
+\usepackage{verbatimbox}	% for \begin{verbbox} and \theverbbox
+
+\ifxetex
+	\usepackage{fontspec} % Required for specifying custom fonts in XeTeX
+	\setmainfont{Gentium Book Basic}
+	\setsansfont[Scale=MatchLowercase]{Open Sans}
+	\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\else
+	\usepackage[T1]{fontenc} % support for accents
+	\usepackage[utf8]{inputenx} % support for accents
+	\usepackage{lmodern}
+\fi
+
+\usepackage{amssymb}
+\usepackage{wasysym}
+
+\usepackage[main=english,dutch]{babel} % English / Dutch language/hyphenation
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage{xspace}   % used in \newcommands, takes care of automatically insertion of space
+
+\usepackage{paralist}		% for \begin{inparaenum}[(i)] \item \end{inparaenum}
+\usepackage{enumitem}		% for [noitemsep,topsep=0pt] to adjust spacing
+
+\usepackage{color} 	% used in \newcommands, a colorful text is better ;-)
+\usepackage[usenames,dvipsnames,table]{xcolor}       % required for the linkbordercolor option of the hyperref package
+
+\usepackage[normalem]{ulem}	% for \revdel which is using \sout to strike out
+\usepackage{soul}		% for \hl{}
+
+\usepackage{url}    % for \url{}
+
+\usepackage[hidelinks]{hyperref} % Required for links and changing link options
+\hypersetup{
+	pdfauthor={Shayan Shahand}, 
+	pdftitle={Science Gateways for Biomedical Big Data Analysis | Shayan Shahand}, 
+	pdfsubject={Shayan Shahand's PhD Thesis},
+	pdfkeywords={Science Gateway (SG), e-Science, Science Portal, Virtual Research Environment (VRE), Problem Solving Environment (PSE), Virtual Laboratory (VL), collaboratory, e-Research environment, e-Infrastructure, cyberinfrastructure, business reference model, Science Gateway Canvas (SGC), Science Gateway development, Science Gateway frameworks, Science Gateway technologies, Grid Portal, Big Data, Business Model Canvas, Sustainability}, 
+	pdfdisplaydoctitle=true, 
+	bookmarks=true, 
+	bookmarksnumbered=true, 
+	breaklinks=true
+}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\figureautorefname{Figure}
+\def\subfigureautorefname{Figure}
+\def\chapterautorefname{Chapter}
+
+%\usepackage[noabbrev,capitalise]{cleveref}    % use \cref{lable} and \Cref{label}
+%\crefname{section}{sect.}{sections}
+%\Crefname{section}{Sect.}{Sections}
+%\crefname{figure}{fig.}{figures}
+%\Crefname{figure}{Fig.}{Figures}
+
+\usepackage[printonlyused]{acronym} % Include a list of acronyms
+%\usepackage{multicol}	% for multicolumn acronyms \begin{multicols}{2}
+
+\usepackage{rotating}	% for vertical rotated text in table cells use \begin{sideways}rotated text\end{sideways}
+						% also for rotated figures (use \begin{sidewaysfigure})
+						
+\usepackage{multirow}	% for \multirow{3}{*}{Text}
+\usepackage{booktabs}	% Professional tables (\toprule, \midrule, \bottomrule)
+\usepackage{xtab}		% Break tables across pages (see Portfolio)
+\usepackage{diagbox}	% Diagonal box in table
+
+%\usepackage{blindtext}	% dummy text for testing layout
+
+%\usepackage{indentfirst}	% indent all paragraphs
+
+\usepackage{chapterthumb}	% read the chapterthumb.sty
+\usepackage[headsepline]{scrlayer-scrpage}	% required for the chapterthum
+%\usepackage{scrheadings}
+
+%\usepackage{cite}			% automatically sort and properly compress/range the citation numbers
+
+\usepackage[
+backend=bibtex,
+style=numeric-comp,
+firstinits=true,
+minnames=1,
+maxnames=3
+]{biblatex}			% decent management of bibtex
+
+
+\usepackage{etoolbox}	% for the following patch
+% reset acronyms for each chapter
+\preto\chapter\acresetall
+
+\usepackage{metalogo}	% for \TeX  \XeTeX  \LuaTeX  \LaTeX  \XeLaTeX  \LuaLaTeX  \LaTeXe
+
+\usepackage[super]{nth}	% for \nth{1} \nth{2} and so on
+
+%\usepackage{showframe}	% show frames of floats for debugging
+
+\usepackage{eso-pic}
+
+\usepackage{bidi}% this should be the last package to load.
