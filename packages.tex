@@ -7,13 +7,7 @@
 	
 \usepackage{array}			% improves the standard LaTeX2e array and tabular environments to provide better appearance and additional user controls.
 
-%\usepackage[font=footnotesize]{subfig}	% replacement for subfigure.sty package 
 \usepackage[caption=false,font=footnotesize]{subfig}
-% subfig.sty requires and automatically loads caption.sty which will override
-% template specific handling of captions and this will result in non-template style
-% figure/table captions. To prevent this problem, be sure and preload
-% caption.sty with its "caption=false" package option. This is will preserve
-% your template.cls handing of captions.
 
 \usepackage{sidecap}	% for side captions (use \begin{SCfigure})
 
@@ -66,14 +60,7 @@
 \def\subfigureautorefname{Figure}
 \def\chapterautorefname{Chapter}
 
-%\usepackage[noabbrev,capitalise]{cleveref}    % use \cref{lable} and \Cref{label}
-%\crefname{section}{sect.}{sections}
-%\Crefname{section}{Sect.}{Sections}
-%\crefname{figure}{fig.}{figures}
-%\Crefname{figure}{Fig.}{Figures}
-
 \usepackage[printonlyused]{acronym} % Include a list of acronyms
-%\usepackage{multicol}	% for multicolumn acronyms \begin{multicols}{2}
 
 \usepackage{rotating}	% for vertical rotated text in table cells use \begin{sideways}rotated text\end{sideways}
 						% also for rotated figures (use \begin{sidewaysfigure})
@@ -83,15 +70,8 @@
 \usepackage{xtab}		% Break tables across pages (see Portfolio)
 \usepackage{diagbox}	% Diagonal box in table
 
-%\usepackage{blindtext}	% dummy text for testing layout
-
-%\usepackage{indentfirst}	% indent all paragraphs
-
 \usepackage{chapterthumb}	% read the chapterthumb.sty
 \usepackage[headsepline]{scrlayer-scrpage}	% required for the chapterthum
-%\usepackage{scrheadings}
-
-%\usepackage{cite}			% automatically sort and properly compress/range the citation numbers
 
 \usepackage[
 backend=bibtex,
@@ -109,8 +89,6 @@ maxnames=3
 \usepackage{metalogo}	% for \TeX  \XeTeX  \LuaTeX  \LaTeX  \XeLaTeX  \LuaLaTeX  \LaTeXe
 
 \usepackage[super]{nth}	% for \nth{1} \nth{2} and so on
-
-%\usepackage{showframe}	% show frames of floats for debugging
 
 \usepackage{eso-pic}
 
